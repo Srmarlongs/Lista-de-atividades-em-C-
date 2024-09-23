@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numero;
+
+    // Solicita ao usuário para inserir um número inteiro positivo
+    cout << "Digite um número inteiro positivo: ";
+    cin >> numero;
+
+    // Verifica se o número inserido é positivo
+    if (numero <= 0) {
+        cout << "O número deve ser um inteiro positivo. Programa encerrado." << endl;
+        return 1; // Encerra o programa com um código de erro
+    }
+
+    int i = 0; // Inicializa o contador
+
+    // Exibe todos os números pares entre 0 e o número inserido
+    cout << "Números pares entre 0 e " << numero << ":" << endl;
+
+    do {
+        if (i % 2 == 0) { // Verifica se o número é par
+            cout << i << " ";
+        }
+        i++; // Incrementa o contador
+    } while (i <= numero); // O loop continua enquanto i for menor ou igual ao número inserido
+
+    cout << endl; // Linha em branco para a formatação
+
+    return 0;
+}
+
